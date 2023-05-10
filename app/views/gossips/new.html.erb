@@ -1,0 +1,33 @@
+<h1>Créer un potin</h1>
+
+<%= form_tag gossips_path do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title %>
+  </div>
+  
+  <div>
+    <%= label_tag :content %>
+    <%= text_area_tag :content %>
+  </div>
+  
+  <%= submit_tag "Créer le potin" %>
+<% end %>
+
+<!-- Formulaire de création de potin-->
+
+      <div class="form">
+        <%= form_tag(gossips_path) do %>
+          <div>
+            <%= label_tag(:title, "Titre du potin :") %>
+            <%= text_field_tag(:title) %>
+          </div>
+
+          <div>
+            <%= label_tag(:content, "Contenu du potin :") %>
+            <%= text_area_tag(:content) %>
+          </div>
+
+          <%= submit_tag("Enregistrer") %>
+        <% end %>
+      </div>

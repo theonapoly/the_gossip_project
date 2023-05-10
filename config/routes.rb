@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/show'
 
   root 'home#index'
 
@@ -11,7 +10,8 @@ Rails.application.routes.draw do
   
   get 'gossips/:id', to: 'gossips#show', as: 'gossip'
 
-  resources :gossips, only: [:index, :show]
+  resources :gossips, only: [:index, :show, :create, :new]
+
   resources :users, only: [:show]
-  
+
 end

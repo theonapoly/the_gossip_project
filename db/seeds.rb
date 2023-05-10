@@ -8,6 +8,9 @@
 
 require 'faker'
 
+puts "Détruire la base de données existante..."
+Rake::Task['db:migrate:reset'].invoke
+
 10.times do
   City.create!(name: Faker::Address.city, zip_code: Faker::Address.zip_code)
 end
